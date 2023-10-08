@@ -9,16 +9,26 @@
 </head>
 
 <body>
-    <div class="container mx-auto p-4 flex items-center justify-center flex-col min-h-screen">
-        <h1 class="text-cyan-500 font-bold text-2xl">WEATHER APP</h1>
+    <div class="w-full shadow-md flex items-center justify-center" style="height: 10vh;">
+        <h1 class="text-cyan-500 font-bold text-2xl">Weather App.</h1>
+    </div>
+
+    <div class="container mx-auto flex items-center justify-evenly flex-col" style="min-height: 90vh;">
+        <div class="text-center">
+            <p class="font-bold text-cyan-500 text-2xl m-5 md:m-0">Explore the country you're curious about!</p>
+            <p class="font-light text-cyan-500 text-xl m-5 md:m-0">Realtime website to display weather information.</p>
+        </div>
 
         <div class="max-w-md mx-auto shadow-md p-4 rounded-lg">
-            <input type="text" id="cityInput" class="border border-sky-500 rounded-md p-2" placeholder="Enter City">
-            <button id="searchBtn" class="bg-cyan-500 hover:bg-cyan-600 text-white p-2 rounded-md">Search</button>
-            <div id="weatherInfo" class="mt-4 text-center"></div>
+            <div class="flex justify-center">
+                <input type="text" id="cityInput" class="border border-cyan-500 rounded-md p-2 mr-1"
+                    placeholder="Enter Country">
+                <button id="searchBtn" class="bg-cyan-500 hover:bg-cyan-600 text-white p-2 rounded-md">Search</button>
+            </div>
+            <div id="weatherInfo" class="text-center"></div>
         </div>
-        
-        <div id="otherWeather" class="mt-4 text-center flex flex-wrap justify-center shadow-md p-3"></div>
+
+        <div id="otherWeather" class="mt-4 gap-x-2 gap-y-3 lg:gap-x-0 lg:gap-y-0 p-2 text-center shadow-md grid grid-cols-2 sm:grid-cols-3 lg:flex lg:justify-center lg:items-center"></div>
     </div>
 
     <div id="errorContainer" class="fixed bottom-0 left-0 right-0 flex justify-center hidden"
@@ -39,8 +49,6 @@
         </div>
     </div>
 
-
-    <script src=".env.js"></script>
     <script src="index.js"></script>
 </body>
 

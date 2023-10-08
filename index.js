@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     const icon = weather[0].icon;
 
     const weatherHTML = `
-    <div class="flex flex-col items-center justify-center m-2 bg-cyan-500 text-white rounded-md" style="width: 150px; height: 150px;">
+    <div class="flex flex-col items-center lg:m-3 justify-center bg-cyan-500 text-white rounded-md" style="width: 150px; height: 150px;">
         <h2 class="text-2xl font-semibold">${name}</h2>
         <p>${description}</p>
-        <p class="text-4xl font-bold">${temperature}°C</p>
+        <p class="text-3xl font-bold">${temperature}°C</p>
         <img src="https://openweathermap.org/img/w/${icon}.png" alt="Weather icon">
       </div>
     `;
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const icon = weather[0].icon;
 
         const weatherHTML = `
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center mt-4">
         <h2 class="text-2xl font-semibold">${name}</h2>
         <p class="text-gray-600">${description}</p>
         <p class="text-4xl font-bold">${temperature}°C</p>
